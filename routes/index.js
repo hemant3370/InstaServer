@@ -23,7 +23,7 @@ exports.me = function(req, response) {
             if (res.statusCode === 200) {
                 try {
                     var data = JSON.parse(json);
-                    res.setHeader("Access-Control-Allow-Origin", "*");
+                    response.setHeader("Access-Control-Allow-Origin", "*");
                     response.json(data);
                     console.log(JSON.stringify(data));
                 } catch (e) {
