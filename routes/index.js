@@ -5,15 +5,15 @@ var http = require('http');
 
 
 exports.me = function(req, response) {
-    var url = 'http://www.instagram.com/hemant3370/media/';
+    var query = req.params.string;
+    
     var options = {
         host: 'instagram.com',
-        path: '/hemant3370/media',
+        path: '/' + query + '/media',
         headers: {
             'User-Agent': 'request'
         }
     };
-
     https.get(options, function(res) {
         var json = '';
         res.on('data', function(chunk) {
@@ -25,13 +25,13 @@ exports.me = function(req, response) {
                     var data = JSON.parse(json);
                     response.setHeader("Access-Control-Allow-Origin", "*");
                     response.json(data);
-                    console.log(JSON.stringify(data));
+                    
                 } catch (e) {
-
+                    response.json(e);
                     console.log('Error parsing JSON!');
                 }
             } else {
-
+                response.end("unknown error");
                 console.log('Status:', res.statusCode);
             }
         });

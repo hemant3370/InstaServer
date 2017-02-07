@@ -1,0 +1,14 @@
+<section>
+<div class="search">
+<h1>Instagram Profile Viewer</h1>
+<input type="text" name="text" ng-model="key" placeholder="Search by Instagram Handle" autofocus>
+<button ng-click="ListController()" class="btn" >Search</button>
+</div>
+<div deckgrid source="mandi.items" class="deckgrid" > 
+<a href={{"#/details/"+card.$index}}> 
+    <div class="a-card">
+    <img src="" data-ng-src="{{card.images.low_resolution.url}}">
+    </div>
+  </a>   
+</div> 
+</section>
