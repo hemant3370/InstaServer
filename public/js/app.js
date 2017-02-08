@@ -1,7 +1,8 @@
 var myApp = angular.module('myApp', [
 	'ngRoute',
 	'mandiControllers',
-	'akoenig.deckgrid'
+	'akoenig.deckgrid',
+	'angular-loading-bar'
 ]);
 myApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
