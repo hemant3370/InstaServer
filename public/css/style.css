@@ -133,7 +133,6 @@ a.small {
   font-size: .9rem;
 }
 
-
 /* Search Styles */
 
 .search {
@@ -207,7 +206,8 @@ a.small {
 .artist img {
   display: block;
   float: left;
-  width: 60px;
+   width:320;
+   height:320;
   -webkit-border-radius: 12px;
   border-radius: 12px;
   margin-right: 10px;
@@ -228,7 +228,7 @@ a.small {
   color: #0F4150;
   width: 90%;
   min-width: 320px;
-  max-width: 620px;
+  max-width: 1080px;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -237,15 +237,11 @@ a.small {
   z-index: 20;
 }
 
-.mainImg {
-   width:640;
-   height:640;
-}
 
 
 .artistinfo img {
   width: 90%;
-  max-width: 640px;
+  max-width: 1080px;
   border-radius: 20px;
 }
 

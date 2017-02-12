@@ -1,8 +1,6 @@
 'use strict';
 
 var https = require('follow-redirects').https;
-var http = require('http');
-
 
 exports.me = function(req, response) {
     var query = req.params.string;
@@ -24,6 +22,10 @@ exports.me = function(req, response) {
                 try {
                     var data = JSON.parse(json);
                     response.setHeader("Access-Control-Allow-Origin", "*");
+                    data.items.forEach(function(elm){
+                     elm.images.standard_resolution.url = elm.images.standard_resolution.url.replace("s640x640", "s1080x1080");
+                      console.log(elm.id);
+                    });
                     response.json(data);
                     
                 } catch (e) {
@@ -31,7 +33,7 @@ exports.me = function(req, response) {
                     console.log('Error parsing JSON!');
                 }
             } else {
-                response.end("unknown error");
+                response.end = res.end;
                 console.log('Status:', res.statusCode);
             }
         });

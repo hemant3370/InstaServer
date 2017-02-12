@@ -12,9 +12,8 @@ if ($routeParams.handle){
 				$http.get(url).success(function(data) {
 			json = data;
 			$scope.mandi = data;
-
 		})
-			}	
+		}	
 		}
 	$scope.ListController = function() {
 					url = '/json/' + $scope.key;
@@ -63,5 +62,4 @@ mandiControllers.controller('DetailsController', ['$scope', '$http', '$routePara
 			}
 		});
 	}
-
 }]);
