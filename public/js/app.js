@@ -10,7 +10,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'partials/list.html',
 			controller: 'ListController'
 		})
-		.when('/:handle', {
+		.when('/user/:handle', {
 			templateUrl: 'partials/list.html',
 			controller: 'ListController'
 		})

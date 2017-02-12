@@ -1,16 +1,26 @@
 var mandiControllers = angular.module('mandiControllers', []);
 var url = null;
 var json = null;
-mandiControllers.controller('ListController', ['$scope', '$http', function($scope, $http) {
-
-	$scope.ListController = function() {
-
-		$scope.url = '/json/' + $scope.key;
-		url = '/json/' + $scope.key;
-		$http.get($scope.url).success(function(data) {
+mandiControllers.controller('ListController', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams) {
+if ($routeParams.handle){
+			$scope.key = $routeParams.handle;
+			if (url === '/json/' + $scope.key){
+				$scope.mandi = json;
+			}
+			else{
+				url = '/json/' + $scope.key;
+				$http.get(url).success(function(data) {
 			json = data;
 			$scope.mandi = data;
 
+		})
+			}	
+		}
+	$scope.ListController = function() {
+					url = '/json/' + $scope.key;
+				$http.get(url).success(function(data) {
+			json = data;
+			$scope.mandi = data;
 		})
 	}
 }]);
