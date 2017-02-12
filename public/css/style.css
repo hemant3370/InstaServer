@@ -73,7 +73,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html {
   background-color: #023E54; 
-  background-image: url(images/fallback-gradient.png); 
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#023E54), to(#10AAC0));
   background-image: -webkit-linear-gradient(top, #023E54, #10AAC0); 
   background-image: -moz-linear-gradient(top, #023E54, #10AAC0);
@@ -205,51 +204,6 @@ a.small {
 
 
 
-/* Artist List Styles */
-
-.artistlist {
-  background: #EEE8D5;
-  width: 65%;
-  min-width: 300px;
-  max-width:500px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  border-radius: 0 0 20px 20px;
-  opacity: .95;
-  z-index: 10;
-}
-
-.artistlist ul {
-  margin: 0;
-  padding: 0;
-  background: #FDF6E3;
-}
-
-.artistlist li {
-  margin: 0;
-  padding: 10px 10px 0 10px;
-  border-bottom: 1px dotted black;
-opacity: .9;
--webkit-transition: all 0.3 ease-out;
--moz-transition: all 0.3 ease-out;
--o-transition: all 0.3 ease-out;
-transition: all 0.3 ease-out;
-}
-
-.artistlist a {
-  display: block;
-  text-decoration: none;
-}
-
-.artistlist li:hover {
-  background: #FDF6E3;
-  opacity: 1;
-  -webkit-transform: scale(1.2);
--moz-transform: scale(1.2); 
--o-transform: scale(1.2); 
-transform: scale(1.2);
-}
-
 .artist img {
   display: block;
   float: left;
@@ -266,9 +220,6 @@ transform: scale(1.2);
   padding-left: 120px !important;
 }
 
-.artist:last-child {
-  border-bottom:none;
-}
 
 .artistinfo {
   font-size: 1.1em;
@@ -290,10 +241,7 @@ transform: scale(1.2);
    width:640;
    height:640;
 }
-.artistinfo h1{
-  font-size: 1.8em;
-  margin-bottom: 0;
-}
+
 
 .artistinfo img {
   width: 90%;
@@ -301,9 +249,6 @@ transform: scale(1.2);
   border-radius: 20px;
 }
 
-.artistinfo .btn {
-
-}
 .deckgrid {
     margin:100px auto;
     padding:10px;
