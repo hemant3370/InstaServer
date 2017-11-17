@@ -7,7 +7,7 @@ exports.me = function(req, response) {
     
     var options = {
         host: 'instagram.com',
-        path: '/' + query + '/media',
+        path: '/' + query + '/?__a=1',
         headers: {
             'User-Agent': 'request'
         }
